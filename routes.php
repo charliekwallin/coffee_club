@@ -3,7 +3,7 @@
 $router->define([
     '' => 'controllers/index.php',
     'about' => 'controllers/about.php',
-    'about/culture' => 'controllers/about-culture.php',
+    'members' => 'controllers/members.php',
     'contact' => 'controllers/contact.php'
 ]);
 
