@@ -1,0 +1,1 @@
+CREATE TABLE `mytodo`.`todos` ( `id` INT NOT NULL AUTO_INCREMENT , `description` TEXT NOT NULL , `completed` BOOLEAN NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
