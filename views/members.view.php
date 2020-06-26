@@ -8,9 +8,8 @@
 <body>
     <h1>Coffee Club Members</h1>
 
-    [Create Button]
     <table>
-    <tr><th>First</th><th>Last</th><th>Email</th><th>Phone</th><td>edit</td><td>delete</td></tr>
+    <tr><th>First</th><th>Last</th><th>Email</th><th>Phone</th></tr>
     <?php foreach ($users as $user) : ?>
         
        <tr>
@@ -18,6 +17,8 @@
             <td><?= $user->last_name; ?></td>
             <td><?= $user->email; ?></td>
             <td><?= $user->phone ?></td>
+            <td>[Edit]</td>
+            <td>[Delete]</td>
         </tr>
     <?php endforeach; ?>
 
