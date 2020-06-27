@@ -36,7 +36,11 @@ CREATE TABLE `orders`(
   `coffee_id` int NOT NULL,
   `qty` smallint NOT NULL,
   `date_ordered` timestamp NOT NULL,
-  PRIMARY KEY(`user_id`, `coffee_id`)
+  PRIMARY KEY(`user_id`, `coffee_id`),
+  FOREIGN KEY fk_user_id (user_id)
+    REFERENCES users(user_id),
+  FOREIGN KEY fk_coffee_id (coffee_id)
+    REFERENCES coffee(coffee_id)
 ) ENGINE=InnoDB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 
 INSERT INTO users VALUES (NULL, 'Lily', 'Black', 'lblack@web250.com', '8285554321', 'secret', 'm', NOW());
@@ -56,9 +60,15 @@ INSERT INTO coffee VALUES(NULL, 'Suplicar Clemencia', 'Unknown', 'Dark', 'Roasty
 INSERT INTO coffee VALUES(NULL, 'Sumatra Mandheling', 'Sumatra', 'Medium', 'Heavy mouthfeel, chocolate and earthy flavors', 13.95, NOW());
 INSERT INTO coffee VALUES(NULL, 'Peru San Ignacio', 'Peru', 'Light', 'Caramel, citrus, and nutty', 13.95, NOW());
 
-DROP USER IF EXISTS 'charlie'@'localhost';
+INSERT INTO orders VALUES (1, 2, 3, NOW());
+INSERT INTO orders VALUES (1, 3, 1, NOW());
+INSERT INTO orders VALUES (2, 4, 5, NOW());
+INSERT INTO orders VALUES (3, 1, 1, NOW());
+INSERT INTO orders VALUES (4, 2, 2, NOW());
+
+DROP USER IF EXISTS 'ccuser'@'localhost';
 FLUSH PRIVILEGES;
-CREATE USER 'charlie'@'localhost' IDENTIFIED BY 'web250secret';
-GRANT ALL ON ccdb.* TO 'charlie'@'localhost';
+CREATE USER 'ccuser'@'localhost' IDENTIFIED BY 'ccsecret';
+GRANT ALL ON ccdb.* TO 'ccuser'@'localhost';
 
 
