@@ -3,8 +3,8 @@
     <h1>Coffee Club Members</h1>
 
 
-    <table>
-    <tr><th>First</th><th>Last</th><th>Email</th><th>Phone</th></tr>
+    <table id="users">
+    <tr><th>First</th><th>Last</th><th>Email</th><th>Phone</th><th>Edit</th><th>Delete</th></tr>
     <?php foreach ($users as $user) : ?>
         
        <tr>

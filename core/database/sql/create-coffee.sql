@@ -25,6 +25,7 @@ CREATE TABLE `coffee` (
   `roast` varchar(25) NOT NULL,
   `notes` text NOT NULL,
   `cost_per_pound` decimal(15, 2) NOT NULL,
+  `image_file_name` VARCHAR(50),
   `date_added` timestamp NOT NULL,
   PRIMARY KEY (`coffee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
@@ -55,10 +56,10 @@ INSERT INTO users VALUES (NULL, 'Sophie', 'Jackson', 'sjackson@web250.com', '888
 INSERT INTO users VALUES (NULL, 'Robert', 'Abraham', 'rabraham@web250.com', '8885558888', 'secret', 'm', NOW() );
 
 
-INSERT INTO coffee VALUES(NULL, 'Summer Seasonal – Colombia Tolima', 'Columbia', 'Light', 'Juicy and bright, with flavors of cherry cola and vanilla', 13.95, NOW());
-INSERT INTO coffee VALUES(NULL, 'Suplicar Clemencia', 'Unknown', 'Dark', 'Roasty, Chocolaty, Honey Sweet', 13.95, NOW());
-INSERT INTO coffee VALUES(NULL, 'Sumatra Mandheling', 'Sumatra', 'Medium', 'Heavy mouthfeel, chocolate and earthy flavors', 13.95, NOW());
-INSERT INTO coffee VALUES(NULL, 'Peru San Ignacio', 'Peru', 'Light', 'Caramel, citrus, and nutty', 13.95, NOW());
+INSERT INTO coffee VALUES(NULL, 'Summer Seasonal – Colombia Tolima', 'Columbia', 'Light', 'Juicy and bright, with flavors of cherry cola and vanilla', 13.95, 'image1', NOW());
+INSERT INTO coffee VALUES(NULL, 'Suplicar Clemencia', 'Unknown', 'Dark', 'Roasty, Chocolaty, Honey Sweet', 13.95, 'image2', NOW());
+INSERT INTO coffee VALUES(NULL, 'Sumatra Mandheling', 'Sumatra', 'Medium', 'Heavy mouthfeel, chocolate and earthy flavors', 13.95, 'image3', NOW());
+INSERT INTO coffee VALUES(NULL, 'Peru San Ignacio', 'Peru', 'Light', 'Caramel, citrus, and nutty', 13.95, 'image4', NOW());
 
 INSERT INTO orders VALUES (1, 2, 3, NOW());
 INSERT INTO orders VALUES (1, 3, 1, NOW());

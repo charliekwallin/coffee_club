@@ -1,3 +1,37 @@
 body {
-    background-color: burlywood;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: antiquewhite;
+    color: #5f3229;
 }
+
+
+img.beans{
+    border: 5px solid #d1966c;
+    border-radius: 2em;
+    padding: .5em;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 75%;
+    border: #3a1f11;  
+    border-radius: 2em;
+}
+
+#users th {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #3a1f11;
+    color: white;
+
+  }
+
+  #users td {
+      padding-top: 1.5em;
+      padding-left: .5em;
+
+  }
