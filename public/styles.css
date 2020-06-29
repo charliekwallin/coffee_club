@@ -7,8 +7,8 @@ body {
 
 img.beans{
     border: 5px solid #d1966c;
-    border-radius: 5em;
-    padding: 5em;
+    border-radius: 2em;
+    padding: .5em;
     width: 300px;
     max-width: 100%;
     height: auto;
